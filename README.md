@@ -6,6 +6,4 @@ Correo personal: steven.montealegre91@gmail.com
 URL repositorio: https://github.com/StevenMontealegre/so-exam3  
 
 # III. Servicio web en flask con estructura vista en clase:  
-Debemos crear un servicio virtualizado (flaskdev) junto con 2 archivos requeridos para ese ambiente virtual (requirements_dev.txt y requirements.txt).  
-
-Luego se crea una carpeta llamada op_stats donde se crea un archivo.py (se llama stats.py) el cual contiene una clase y en esa clase están los métodos que dan información sobre el porcentaje de la cpu, memoria disponible y espacio libre del disco del PC:  
+Debemos crear un servicio virtualizado (flaskdev) junto con 2 archivos requeridos para ese ambiente virtual (requirements_dev.txt y requirements.txt). Seguido, debemos crear una carpeta que llevará el nombre op_stats, en donde estará localizado el archivo python stats.py, este será el encargado de arrojar el estado de nuestra máquina: CPU, MEMORY y HARD DISK.  
