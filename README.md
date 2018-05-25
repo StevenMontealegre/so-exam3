@@ -11,5 +11,5 @@ A continuación creamos otro archivo (app.py) el cual contiene los métodos para
 * (_los códigos utilizados se encuentran en el fichero: Códigos_python.txt_)
 
 Finalmente, ejecutamos el comando python [_op_stats/app.py_] y con ayuda de POSTMAN realizamos peticiones http:  
-![](Imagenes/Captura de pantalla (26).png)
+![](imagenes/Captura de pantalla (26).png)
 
