@@ -1,4 +1,4 @@
-# CÓDIGOS PYTHON:  
+## CÓDIGOS PYTHON:  
 
 import psutil
 
@@ -18,3 +18,4 @@ class Stats():
   def dar_espacio_disco(cls):
     espacio_disponible = psutil.disk_usage('/').free
     return espacio_disponible
+     
