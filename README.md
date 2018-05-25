@@ -15,7 +15,7 @@ Finalmente, ejecutamos el comando python [_op_stats/app.py_] y con ayuda de POST
 ![](imagenes/Captura%20de%20pantalla%20(27).png)  
 ![](imagenes/Captura%20de%20pantalla%20(28).png)  
 
-Podemos visualizar las peticiones y las respuestas del servidor:  
-![](imagenes/Captura%20de%20pantalla%20(30).png) 
+Podemos evidenciar las peticiones que se hicieron y la respuesta del servidor:  
+![](imagenes/Captura%20de%20pantalla%20(29).png) 
  
 
