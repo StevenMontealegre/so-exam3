@@ -19,6 +19,12 @@ Podemos evidenciar las peticiones que se hicieron y la respuesta del servidor:
 ![](imagenes/Captura%20de%20pantalla%20(29).png)  
 
 ## III. Implementación de las pruebas unitarias empleando Fixtures y Mocks:  
-Creamos una carpeta con un nombre alusivo a la actividad que realizaremos por ejemplo, test. Dentro de esta carpeta estará un archivo llamado _test_stats.py_, este es requerido para ejecutar las pruebas del servicio. 
+Creamos una carpeta con un nombre alusivo a la actividad que realizaremos por ejemplo, test. Dentro de esta carpeta estará un archivo llamado _test_stats.py_, este es requerido para ejecutar las pruebas del servicio. Seguido ejecutamos el comando pytest -v para correr las pruebas.  
+* (_los códigos utilizados se encuentran en el fichero: Códigos_python.txt_)  
+
+![](imagenes/Captura%20de%20pantalla%20(30).png)  
+
+
+
  
 
