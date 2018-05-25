@@ -18,11 +18,15 @@ Finalmente, ejecutamos el comando python [_op_stats/app.py_] y con ayuda de POST
 Podemos evidenciar las peticiones que se hicieron y la respuesta del servidor:  
 ![](imagenes/Captura%20de%20pantalla%20(29).png)  
 
-## III. Implementación de las pruebas unitarias empleando Fixtures y Mocks:  
-Creamos una carpeta con un nombre alusivo a la actividad que realizaremos por ejemplo, test. Dentro de esta carpeta estará un archivo llamado _test_stats.py_, este es requerido para ejecutar las pruebas del servicio. Seguido ejecutamos el comando pytest -v para correr las pruebas.  
+## IV. Implementación de las pruebas unitarias empleando Fixtures y Mocks:  
+Creamos una carpeta con un nombre alusivo a la actividad que realizaremos por ejemplo, test. Dentro de esta carpeta estará un archivo llamado _test_stats.py_, este es requerido para ejecutar las pruebas del servicio. Seguido escribimos en consola el comando pytest -v para correr las pruebas.  
 * (_los códigos utilizados se encuentran en el fichero: Códigos_python.txt_)  
 
 ![](imagenes/Captura%20de%20pantalla%20(30).png)  
+
+## V. Servicio de integración para la pruebas unitarias:  
+Creamos un archivo llamado tox.ini en el cual estarán localizados la información básica del proyecto y las pruebas que se quieran ejecutar. Enfatizamos el lenguaje a usado, el comando a ejecutar, las librerias y las dependencias:   
+
 
 
 
