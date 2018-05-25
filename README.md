@@ -26,6 +26,8 @@ Creamos una carpeta con un nombre alusivo a la actividad que realizaremos por ej
 
 ## V. Servicio de integración para la pruebas unitarias:  
 Creamos un archivo llamado tox.ini en el cual estarán localizados la información básica del proyecto y las pruebas que se quieran ejecutar. Enfatizamos el lenguaje a usado, el comando a ejecutar, las librerias y las dependencias:   
+Finalmente se muestra los resultados de la ejecución (para ello se ejecuto el comando tox -e pytest)  
+![](imagenes/Captura%20de%20pantalla%20(31).png)
 
 
 
