@@ -27,7 +27,14 @@ Creamos una carpeta con un nombre alusivo a la actividad que realizaremos por ej
 ## V. Servicio de integración para la pruebas unitarias:  
 Creamos un archivo llamado tox.ini en el cual estarán localizados la información básica del proyecto y las pruebas que se quieran ejecutar. Enfatizamos el lenguaje a usado, el comando a ejecutar, las librerias y las dependencias:   
 Finalmente se muestra los resultados de la ejecución (para ello se ejecuto el comando tox -e pytest)  
-![](imagenes/Captura%20de%20pantalla%20(31).png)
+![](imagenes/Captura%20de%20pantalla%20(31).png)  
+
+En ultima instancia se crea un archivo .travis.yml, en el cual agregamos el directorio raíz del repositorio (formato YAML). este archivo especifica entre otras cosas, el lenguaje de programación utilizado y el entorno de construcción. Para cuando se ha activado Travis CI en un repositorio en GitHub, se notificarán los nuevos cambios. También Travis puede limitar la ejecución para un branch específico. Travis CI revisará la rama y ejecutará los comandos especificados en .travis.yml.  
+![](imagenes/Captura%20de%20pantalla%20(32).png)  
+![](imagenes/Captura%20de%20pantalla%20(33).png)  
+![](imagenes/Captura%20de%20pantalla%20(34).png)  
+
+
 
 
 
