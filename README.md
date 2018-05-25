@@ -30,7 +30,6 @@ Finalmente se muestra los resultados de la ejecución (para ello se ejecuto el c
 En ultima instancia se crea un archivo .travis.yml, en el cual agregamos el directorio raíz del repositorio (formato YAML). este archivo especifica entre otras cosas, el lenguaje de programación utilizado y el entorno de construcción. Para cuando se ha activado Travis CI en un repositorio en GitHub, se notificarán los nuevos cambios. También Travis puede limitar la ejecución para un branch específico. Travis CI revisará la rama y ejecutará los comandos especificados en .travis.yml.  
 ![](imagenes/Captura%20de%20pantalla%20(32).png)  
 ![](imagenes/Captura%20de%20pantalla%20(33).png)  
-![](imagenes/Captura%20de%20pantalla%20(34).png) 
 
 ## Observación:  
 * (_los códigos utilizados se encuentran en el fichero: Códigos_python.txt_)  
