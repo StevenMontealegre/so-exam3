@@ -16,6 +16,9 @@ Finalmente, ejecutamos el comando python [_op_stats/app.py_] y con ayuda de POST
 ![](imagenes/Captura%20de%20pantalla%20(28).png)  
 
 Podemos evidenciar las peticiones que se hicieron y la respuesta del servidor:  
-![](imagenes/Captura%20de%20pantalla%20(29).png) 
+![](imagenes/Captura%20de%20pantalla%20(29).png)  
+
+## III. Implementación de las pruebas unitarias empleando Fixtures y Mocks:  
+Creamos una carpeta con un nombre alusivo a la actividad que realizaremos por ejemplo, test. Dentro de esta carpeta estará un archivo llamado _test_stats.py_, este es requerido para ejecutar las pruebas del servicio. 
  
 
