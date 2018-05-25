@@ -1,24 +1,110 @@
-1)  
+1) stats.py:
+
     import psutil
 
     class Stats():
 
       @classmethod
       def dar_porcentaje_cpu(cls):
-        porcentaje = psutil.cpu_percent()
-        return porcentaje
+        CPU_PERCENT = psutil.cpu_percent()
+        return CPU_PERCENT
 
       @classmethod
       def dar_memoria_disponible(cls):
-        ram_disponible = psutil.virtual_memory().available
-        return ram_disponible
+        AVAILABLE_RAM = psutil.virtual_memory().available
+        return AVAILABLE_RAM
 
       @classmethod
       def dar_espacio_disco(cls):
-        espacio_disponible = psutil.disk_usage('/').free
-        return espacio_disponible  
+        FREE_DISK = psutil.disk_usage('/').free
+        return FREE_DISK  
     
-2) 
+2) app.py: 
 
-    
-     
+    from flask import Flask
+    import json
+    import sys
+    sys.path.append('/home/flaskdev/so-exam3')
+    from op_stats.stats import Stats
+
+    app = Flask(__name__)
+
+    @app.route('/v1/stats/cpu')
+    def informacion_cpu():
+        info_cpu = Stats.dar_porcentaje_cpu()
+        return json.dumps({'Porcentaje CPU': info_cpu})
+
+    @app.route('/v1/stats/memory')
+    def informacion_memoria():
+        info_memoria = Stats.dar_memoria_disponible()
+        return json.dumps({'Memoria Disponible': info_memoria})
+
+    @app.route('/v1/stats/disk')
+    def informacion_disco():
+        info_disco = Stats.dar_espacio_disco()
+        return json.dumps({'Espacio Libre Disco': info_disco})
+
+
+    if __name__ == '__main__':
+        app.run(host='0.0.0.0',port=8080)  
+        
+3) test_stats.py:
+
+    import pytest
+    import sys
+    sys.path.append('/home/flaskdev/so-exam3')
+
+    from op_stats.app import app
+    from op_stats.stats import Stats
+
+    @pytest.fixture
+    def client():
+      client = app.test_client()
+      return client
+
+    def test_get_cpu_percent(mocker, client):
+      mocker.patch.object(Stats, 'dar_porcentaje_cpu', return_value=100)
+      response = client.get('/v1/stats/cpu')
+      assert response.data.decode('utf-8') == '{"Porcentaje CPU": 100}'
+      assert response.status_code == 200
+
+    def test_get_available_memory(mocker, client):
+      mocker.patch.object(Stats, 'dar_memoria_disponible', return_value=2000)
+      response = client.get('/v1/stats/memory')
+      assert response.data.decode('utf-8') == '{"Memoria Disponible": 2000}'
+      assert response.status_code == 200
+
+
+    def test_get_disk_space(mocker, client):
+      mocker.patch.object(Stats, 'dar_espacio_disco', return_value=1000)
+      response = client.get('/v1/stats/disk')
+      assert response.data.decode('utf-8') == '{"Espacio Libre Disco": 1000}'
+      assert response.status_code == 200
+      
+4) tox.ini: 
+
+    [tox]
+    envlist = pytest 
+
+    [testenv]
+    basepython = python3
+
+    [testenv:pytest]
+    deps =
+      -rrequirements_dev.txt
+    commands =
+      pytest
+      
+5) .travis.yml: 
+
+    sudo: false
+    language: python
+    notifications:
+      email: false
+    python:
+    - '3.4'
+    install: pip install tox-travis
+    script: tox -e pytest
+
+
+
